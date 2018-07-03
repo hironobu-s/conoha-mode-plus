@@ -1,0 +1,93 @@
+* {
+    font-size: 10px;
+    line-height: 1;
+    font-family: "Noto Sans JP", "Droid Sans", Helvetica, YuGothic, "Yu Gothic", "游ゴシック体", "游ゴシック", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Arial, sans-serif;
+    color: #414141;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 300px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 300px;
+    background-color: #FFF;
+    z-index: 10;
+    padding: 5px 0;
+    border-bottom: 1px solid #12b8d7;
+}
+
+article {
+    margin-top: 55px;
+}
+
+p.reset {
+    line-height: 32px;
+    margin-right: 25px;
+    text-align: right;
+    font-size: 8px;
+    color: #555;
+}
+
+h1 {
+    float: left;
+    padding: 0;
+    background-image: url(icon.png);
+    background-repeat: no-repeat;
+    background-position: center left 20px;
+    line-height: 32px;
+    
+    font-size: 12pt;
+    text-indent: 60px;
+    color: #565656;
+    font-weight: bold;
+    
+    strong {
+	font-size: 20px;
+	color: #12b8d7;
+	font-weight: bold;
+    }
+}
+
+
+ul#backgrounds {
+    width: 300px;
+    background-color: #fff;
+    margin: 10px auto 0 auto;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    
+    li {
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+    }
+    
+    img {
+	width: 80px;
+	border-radius: 2px;
+    }
+    
+    img:hover {
+	transition: all 0.2s;
+	transform: scale(1.2);
+	z-index: 10;
+    }
+
+    a {
+	cursor: pointer;
+	transition: all 0.2s;
+	filter: brightness(50%);
+    }
+    
+    a:hover {
+	transition: all 0.2s;
+	filter: brightness(100%);
+    }
+}
+

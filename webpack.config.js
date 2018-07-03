@@ -47,11 +47,24 @@ module.exports = [
 			use: [
 			    {
 				loader: 'css-loader',
-				options: {url: false}
+				options: {
+				    url: false,
+				    minimize: true
+				}
 			    },
 			    {
 				loader: 'sass-loader'
-			    }
+			    },
+			    {
+				loader: 'postcss-loader',
+				options: {
+				    plugins: function () {
+					return [
+					    require('autoprefixer')
+					];
+				    }
+				}
+			    }			    
 			]
 		    })
 		}

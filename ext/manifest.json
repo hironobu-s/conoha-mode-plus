@@ -4,7 +4,8 @@
     "version": "1.0",
     "page_action": {
 	"default_title": "このはモードPlus!",
-	"default_popup": "popup.html"
+	"default_popup": "popup.html",
+	"default_icon": "icon.png"
     },
     "content_scripts": [
 	{

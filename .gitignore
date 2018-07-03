@@ -1,0 +1,4 @@
+ext/*.js
+ext/*.css
+node_modules
+*.lock

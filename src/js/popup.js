@@ -2,18 +2,17 @@ import conohawp from './conohawp';
 
 const build_li_node = function(type) {
     const thumb_url = conohawp.thumb_url(type);
-    const image_url = conohawp.image_url(type);
     
     const img = document.createElement("img");
     img.setAttribute("src", thumb_url);
 
     const anchor = document.createElement("a");
-    anchor.setAttribute("data-wpurl", image_url)
+    anchor.setAttribute("data-wpurl", type)
     anchor.appendChild(img)
     anchor.addEventListener("click", function() {
 	// replace wallpaper
 	chrome.tabs.query({active: true, currentWindow: true}, tabs => {
-	    chrome.tabs.sendMessage(tabs[0].id, { "action": "replace", "url": image_url });
+	    chrome.tabs.sendMessage(tabs[0].id, { "action": "replace", "type": type });
 	});
     });
     

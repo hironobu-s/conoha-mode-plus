@@ -3,30 +3,32 @@ import conohawp from './conohawp';
 // clear image_url on localStorace
 const clear = function() {
     console.log("clear");
-    localStorage.removeItem("wp_image_url");
+    localStorage.removeItem("wp_image_type");
     const bg = document.querySelector(".bg-all");
     bg.setAttribute('style', "background-image: url(https://manage.conoha.jp/Content/Images/ConoHa/ConoHaMode/bg_conoha.jpg); opacity: 1;");
 }
 
-const replace = function(url) {
+const replace = function(type) {
     // store image_url into localStorace
-    localStorage.setItem("wp_image_url",url);
+    localStorage.setItem("wp_image_type", type);
 
     // replace wallpaper
+    const width = window.parent.screen.width;
+    const url = conohawp.image_url(type, width);
     const bg = document.querySelector(".bg-all");
     bg.setAttribute('style', "background-image: url(" + url + "); opacity: 1;");
 }
 
 chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
     if(msg.action == "replace") {
-	replace(msg.url);
+	replace(msg.type);
     } else if(msg.action == "clear") {
 	clear();
     }
 });
 
 // Add inline CSS clearing original background image
-const url = localStorage.getItem("wp_image_url");
+const url = localStorage.getItem("wp_image_type");
 if(url != null) {
     var s = document.createElement ("style");
     var rule = document.createTextNode('.bg-all { opacity: 0; }');
@@ -60,9 +62,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
     chrome.runtime.sendMessage({});
     
     // Restore wallpapre that has been setted by conoha-mode-plus
-    const url = localStorage.getItem("wp_image_url");
-    if(url != null) {
-	replace(url)
+    const type = localStorage.getItem("wp_image_type");
+    if(type != null) {
+	replace(type)
     }
 });
 

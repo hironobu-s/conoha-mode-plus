@@ -34,8 +34,19 @@ module.exports.base_url = function() {
     return "http://conoha.mikumo.com/wp-content/themes/conohamikumo/images/wallpaper/";
 }
 
-module.exports.image_url = function(type) {
-    return this.base_url() + type + "/2560_1440.jpg";
+module.exports.image_url = function(type, screen_width) {
+    if(window.devicePixelRatio == 2) {
+	screen_width *= 2
+    }
+    
+    let file;
+    if(screen_width >= 1920) {
+	file = "1920_1080.jpg";
+    } else {
+	file = "1280_800.jpg";
+    }
+    
+    return this.base_url() + type + "/" + file;
 }
 
 module.exports.thumb_url = function(type) {

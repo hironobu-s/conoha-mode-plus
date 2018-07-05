@@ -22,6 +22,7 @@ const build_li_node = function(type) {
     
     return li
 }
+
 const ul = document.querySelector("#backgrounds");
 for(const type of conohawp.types()) {
     ul.appendChild(build_li_node(type));

@@ -18,39 +18,52 @@ header {
     background-color: #FFF;
     z-index: 10;
     padding: 5px 0;
-    border-bottom: 1px solid #12b8d7;
+    border-bottom: 2px solid #12b8d7;
+    height: 50px;
+    background-image: url(main_conoha.png);
+    background-repeat: no-repeat;
+    background-position: center left ;
+    background-size: 35%;
 }
 
 article {
-    margin-top: 55px;
-}
-
-p.reset {
-    line-height: 32px;
-    margin-right: 25px;
-    text-align: right;
-    font-size: 8px;
-    color: #555;
+    margin-top: 70px;
 }
 
 h1 {
-    float: left;
-    padding: 0;
-    background-image: url(icon.png);
-    background-repeat: no-repeat;
-    background-position: center left 20px;
-    line-height: 32px;
-    
-    font-size: 12pt;
-    text-indent: 60px;
-    color: #565656;
-    font-weight: bold;
+    margin-top: 15px;
+    padding: 0 0 0 90px;
+    span {
+	display: inline-block;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #12b8d7;
+    }
     
     strong {
-	font-size: 20px;
-	color: #12b8d7;
+	position: relative;
+	top: -5px;
+	transform: rotate(-15deg);
+	transform-origin: left top;
+	vertical-align: top;
+	display: inline-block;
+	font-size: 8px;
+	padding: 0px;
+	color: #FFF;
+	background-color: #ff811e;
+	border: 1px solid #dd710e;
 	font-weight: bold;
+	border-radius: 2px;
     }
+}
+
+p.reset {
+    margin-top: 5px;
+    margin-right: 5px;
+    text-align: right;
+    vertical-align: bottom;
+    font-size: 8px;
+    color: #555;
 }
 
 
@@ -69,13 +82,13 @@ ul#backgrounds {
     }
     
     img {
-	width: 80px;
+	width: 60px;
 	border-radius: 2px;
     }
     
     img:hover {
 	transition: all 0.2s;
-	transform: scale(1.2);
+	transform: scale(1.3);
 	z-index: 10;
     }
 

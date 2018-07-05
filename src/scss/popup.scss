@@ -15,81 +15,89 @@ header {
     position: fixed;
     top: 0;
     width: 300px;
-    background-color: #FFF;
-    z-index: 10;
-    padding: 5px 0;
-    border-bottom: 2px solid #12b8d7;
-    height: 50px;
-    background-image: url(main_conoha.png);
-    background-repeat: no-repeat;
-    background-position: center left ;
-    background-size: 35%;
-}
+    background-color: #12b8d7;
+    padding:  0;
+    background-image: url(popup_bg.png);
 
-article {
-    margin-top: 70px;
-}
-
-h1 {
-    margin-top: 15px;
-    padding: 0 0 0 90px;
-    span {
-	display: inline-block;
-	font-size: 14pt;
-	font-weight: bold;
-	color: #12b8d7;
+    div {
+    height: 60px;
+	background-image: url(main_conoha.png);
+	background-repeat: no-repeat;
+	background-position: top left ;
+	background-size: auto 60px;
     }
-    
-    strong {
-	position: relative;
-	top: -5px;
-	transform: rotate(-15deg);
-	transform-origin: left top;
-	vertical-align: top;
-	display: inline-block;
-	font-size: 8px;
-	padding: 0px;
-	color: #FFF;
-	background-color: #ff811e;
-	border: 1px solid #dd710e;
-	font-weight: bold;
-	border-radius: 2px;
-    }
-}
 
-p.reset {
-    margin-top: 5px;
-    margin-right: 5px;
-    text-align: right;
-    vertical-align: bottom;
-    font-size: 8px;
-    color: #555;
-
-    a {
-	cursor: pointer;
-	&:hover {
-	    text-decoration: underline;
+    h1 {
+	padding: 20px 0 0 95px;
+	
+	span {
+	    display: inline-block;
+	    font-size: 16pt;
+	    font-weight: bold;
+	    color: #FFF;
+	}
+	
+	strong {
+	    position: relative;
+	    top: -8px;
+	    left: 2px;
+	    transform: rotate(-20deg);
+	    transform-origin: left top;
+	    display: inline-block;
+	    font-size: 8px;
+	    padding: 0px;
+	    color: #FFF;
+	    background-color: #ff811e;
+	    border: 1px solid #dd710e;
+	    font-weight: bold;
+	    border-radius: 2px;
 	}
     }
     
+    p.reset {
+	margin-top: 5px;
+	margin-right: 5px;
+	text-align: right;
+	vertical-align: bottom;
+	font-size: 8px;
+
+	a {
+	    cursor: pointer;
+	    color: #EEE;
+	    &:hover {
+		color: #555;
+		text-decoration: underline;
+	    }
+	}
+    }
 }
 
 
+article {
+    width: 290px;
+    margin: 0px auto;
+    padding-top: 60px;
+    background-color: #12b8d7;
+    border-left: 5px solid #12b8d7;
+    border-right: 5px solid #12b8d7;
+    border-bottom: 5px solid #12b8d7;
+}
+
 ul#backgrounds {
-    width: 300px;
-    background-color: #fff;
-    margin: 10px auto 0 auto;
-    padding: 0;
+    background-color: #FFF;
+    border-radius: 2px;
     list-style-type: none;
-    text-align: center;
+    padding: 10px 5px 0 5px;
     
     li {
 	display: inline-block;
-	margin-right: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
 	margin-bottom: 10px;
     }
     
     img {
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 	width: 60px;
 	border-radius: 2px;
     }
@@ -97,13 +105,12 @@ ul#backgrounds {
     img:hover {
 	transition: all 0.2s;
 	transform: scale(1.3);
-	z-index: 10;
     }
 
     a {
 	cursor: pointer;
 	transition: all 0.2s;
-	filter: brightness(50%);
+	filter: brightness(75%);
     }
     
     a:hover {

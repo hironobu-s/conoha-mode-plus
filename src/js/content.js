@@ -5,7 +5,7 @@ const clear = function() {
     console.log("clear");
     localStorage.removeItem("wp_image_url");
     const bg = document.querySelector(".bg-all");
-    bg.setAttribute('style', "background-image: https://manage.conoha.jp/Content/Images/ConoHa/ConoHaMode/bg_conoha.jpg !important");
+    bg.setAttribute('style', "background-image: url(https://manage.conoha.jp/Content/Images/ConoHa/ConoHaMode/bg_conoha.jpg); opacity: 1;");
 }
 
 const replace = function(url) {
@@ -14,7 +14,7 @@ const replace = function(url) {
 
     // replace wallpaper
     const bg = document.querySelector(".bg-all");
-    bg.setAttribute('style', "background-image: url(" + url + ") !important");
+    bg.setAttribute('style', "background-image: url(" + url + "); opacity: 1;");
 }
 
 // Enable page action button and add event handler 
@@ -32,7 +32,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
 const url = localStorage.getItem("wp_image_url");
 if(url != null) {
     var s = document.createElement ("style");
-    var rule = document.createTextNode('.bg-all { background-image: none !important; }');
+    var rule = document.createTextNode('.bg-all { opacity: 0; }');
     s.media = 'screen';
     s.type = 'text/css';
     s.appendChild(rule);

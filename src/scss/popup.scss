@@ -67,7 +67,11 @@ p.reset {
 
     a {
 	cursor: pointer;
+	&:hover {
+	    text-decoration: underline;
+	}
     }
+    
 }
 
 

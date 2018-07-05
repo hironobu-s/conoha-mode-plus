@@ -10,14 +10,12 @@
     "content_scripts": [
 	{
 	    "matches": ["https://*.conoha.jp/*"],
-	    "js": ["content.js"]
+	    "js": ["content.js"],
+	    "run_at": "document_start"
 	}
     ],
     "background": {
 	"scripts": ["background.js"],
-	    "persistent": false
-    },
-    "permissions": [
-	"tabs", "https://manage.conoha.jp/*"
-    ]
+	"persistent": false
+    }
 }

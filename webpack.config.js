@@ -28,6 +28,9 @@ module.exports = [
 		}
 	    ]
 	},
+	optimization: {
+	    minimize: true,
+	},
     },
     {
 	mode: MODE,

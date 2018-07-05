@@ -13,7 +13,7 @@ const build_li_node = function(type) {
     anchor.addEventListener("click", function() {
 	// replace wallpaper
 	chrome.tabs.query({active: true, currentWindow: true}, tabs => {
-	    chrome.tabs.sendMessage(tabs[0].id, { "url": image_url });
+	    chrome.tabs.sendMessage(tabs[0].id, { "action": "replace", "url": image_url });
 	});
     });
     
@@ -26,4 +26,11 @@ const ul = document.querySelector("#backgrounds");
 for(const type of conohawp.types()) {
     ul.appendChild(build_li_node(type));
 }
+
+const a = document.querySelector("#reset a")
+a.addEventListener("click", function() {
+    chrome.tabs.query({active: true, currentWindow: true}, tabs => {
+	chrome.tabs.sendMessage(tabs[0].id, { "action": "clear" });
+    });
+});
 

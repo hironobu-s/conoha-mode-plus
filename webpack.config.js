@@ -1,7 +1,11 @@
 var path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const MODE = "development"
+const MODE = "production"
+let DEVTOOL = "";
+if(MODE == "development") {
+    DEVTOOL = "inline_source_map";
+}
 
 module.exports = [
     {
@@ -15,7 +19,7 @@ module.exports = [
 	    path: path.join(__dirname, 'ext'),
 	    filename: '[name].js',
 	},
-	devtool: "inline-source-map",
+	devtool: DEVTOOL,
 	module: {
 	    rules: [
 		{ 

@@ -9,7 +9,7 @@
     },
     "content_scripts": [
 	{
-	    "matches": ["https://*.conoha.jp/*"],
+	    "matches": ["https://manage.conoha.jp/*"],
 	    "js": ["content.js"],
 	    "run_at": "document_start"
 	}

@@ -1,12 +1,15 @@
 # このはモードPLUS!
 
-VPSサービス[ConoHa](https://www.conoha.jp/)のコントロールパネルの背景を変更することができるプラグインです。 
+VPSサービス[ConoHa](https://www.conoha.jp/)のコントロールパネルの背景を変更することができるプラグインです。
 
 ![conoha-mode-plus](misc/sc.png)
 
 ## インストール
 
-[Chromeウェブストア](https://chrome.google.com/webstore/detail/%E3%81%93%E3%81%AE%E3%81%AF%E3%83%A2%E3%83%BC%E3%83%89plus/nehkcogkidnjgldmgpijfajajnhokipe)からインストールしてください。
+以下からインストールしてください。
+
+* [Chromeウェブストア](https://chrome.google.com/webstore/detail/%E3%81%93%E3%81%AE%E3%81%AF%E3%83%A2%E3%83%BC%E3%83%89plus/nehkcogkidnjgldmgpijfajajnhokipe)
+* [Firefox Add-ons](https://addons.mozilla.org/ja/firefox/addon/conoha-mode-plus/)
 
 ## 使い方
 

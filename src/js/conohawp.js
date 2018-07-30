@@ -31,7 +31,7 @@ module.exports.types = function() {
 }
 
 module.exports.base_url = function() {
-    return "http://conoha.mikumo.com/wp-content/themes/conohamikumo/images/wallpaper/";
+    return "https://conoha.mikumo.com/wp-content/themes/conohamikumo/images/wallpaper/";
 }
 
 module.exports.image_url = function(type, screen_width) {

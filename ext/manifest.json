@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "このはモードPlus!",
-    "version": "1.2",
+    "version": "1.7",
     "applications": {
 	"gecko": {
 	    "id": "{602A3A98-87BC-4614-B479-DD1367A8EB61}"

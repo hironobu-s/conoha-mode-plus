@@ -1,5 +1,6 @@
 module.exports.types = function() {
     return [
+	"2018_autumn",
 	"2018_swim",
 	"2018_yukata",
 	"2018_rain",
